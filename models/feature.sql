@@ -1,2 +1,0 @@
-select * from "NORTHWINDS"."PAGILA_MART_PUBLIC"."FACTSALES" limit 10;
-
