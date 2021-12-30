@@ -13,4 +13,4 @@ merged_contacts as (
 
 )
 
-select * from merged_contacts
+select {{ dbt_utils.surrogate_key(['first_name', 'last_name', 'phone_number']) }} as contact_pk, * from merged_contacts
