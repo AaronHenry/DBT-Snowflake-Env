@@ -14,10 +14,11 @@ customers as (
     SELECT concat('rds-', customer_id) as contact_id, 
     FIRST_NAME,
     LAST_NAME,  
-    '(' || LEFT(PHONE, 3) || ') ' || SUBSTRING(PHONE, 4, 3) || '-' || SUBSTRING(PHONE,7,4) as phone_number,
+    case when len(phone) = 10 then
+    '(' || LEFT(PHONE, 3) || ') ' || SUBSTRING(PHONE, 4, 3) || '-' || SUBSTRING(PHONE,7,4)
+    else null end as phone_number,
     case when contact_id != NULL then NULL end as company_id
     FROM source_customers 
-    where len(phone) = 10
 )
 
 select * from customers
