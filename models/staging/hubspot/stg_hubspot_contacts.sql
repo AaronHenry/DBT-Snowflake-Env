@@ -4,7 +4,7 @@ with source_contacts as (
 
 companies as (
 
-select * from {{ source('companies', 'STG_HUBSPOT_COMPANIES') }}
+select * from {{ ref('stg_hubspot_companies') }}
 
 ),
 
