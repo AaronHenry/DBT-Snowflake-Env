@@ -1,0 +1,12 @@
+version: 2
+sources:
+  - name: hubspot
+    database: NORTHWINDS
+    schema: HUBSPOT
+    tables:
+      - name: CONTACTS
+  - name: companies
+    database: NORTHWINDS
+    schema: DBT_AHENRY
+    tables:
+      - name: STG_HUBSPOT_COMPANIES
