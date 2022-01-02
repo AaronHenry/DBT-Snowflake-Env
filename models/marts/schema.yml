@@ -1,0 +1,12 @@
+version: 2
+
+models:
+    - name: contacts_dim
+      description: "contacts dimension mart"
+      columns:
+          - name: contact_pk
+            description: "The primary key for this table"
+            tests:
+                - unique
+                - not_null
+
