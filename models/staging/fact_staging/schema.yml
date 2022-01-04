@@ -1,0 +1,11 @@
+version: 2
+
+models:
+    - name: stg_fact_sales
+      description: "staging factsales and dimstore tables"
+      columns:
+          - name: sales_pk
+            description: "The primary key for this table"
+            tests:
+                - unique
+                - not_null

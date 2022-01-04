@@ -1,0 +1,8 @@
+version: 2
+sources:
+  - name: fact_sales
+    database: NORTHWINDS
+    schema: PAGILA_MART_PUBLIC
+    tables:
+      - name: FACTSALES
+      - name: DIMSTORE
